@@ -1,0 +1,15 @@
+use_frameworks!
+source 'https://github.com/Doloreng/LXSZPodSpecsRepo.git'
+source 'https://github.com/volcengine/volcengine-specs'
+source 'https://cdn.cocoapods.org/'
+platform :ios, '10.0'
+
+target 'LXSZAILiveSDK_Example' do
+  pod 'LXSZAILiveSDK', :path => '../'
+
+  target 'LXSZAILiveSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

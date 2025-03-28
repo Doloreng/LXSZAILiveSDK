@@ -1,0 +1,6 @@
+framework module Pods_LXSZAILiveSDK_Example {
+  umbrella header "Pods-LXSZAILiveSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
