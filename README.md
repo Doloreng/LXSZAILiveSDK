@@ -11,6 +11,25 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+### 增加SepcsRepo源
+
+```
+pod repo add LXSpecsRepo https://github.com/Doloreng/LXSZPodSpecsRepo.git
+```
+
+
+
+### 配置Podfile
+
+```
+source 'https://github.com/Doloreng/LXSZPodSpecsRepo.git'
+source 'https://cdn.cocoapods.org/'
+
+target 'MyApp' do
+  pod 'LXSZAILiveSDK', '~> 1.0.1'
+end
+```
+
 ## Installation
 
 LXSZAILiveSDK is available through [CocoaPods](https://cocoapods.org). To install
