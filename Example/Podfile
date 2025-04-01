@@ -1,15 +1,11 @@
-use_frameworks!
+#use_frameworks!
 source 'https://github.com/Doloreng/LXSZPodSpecsRepo.git'
 source 'https://github.com/volcengine/volcengine-specs'
 source 'https://cdn.cocoapods.org/'
-platform :ios, '10.0'
+platform :ios, '12.1'
 
 target 'LXSZAILiveSDK_Example' do
   pod 'LXSZAILiveSDK', :path => '../'
-
-  target 'LXSZAILiveSDK_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  #public pod
+  pod 'WebViewJavascriptBridge', :git => 'https://github.com/stury/WebViewJavascriptBridge.git', :branch => 'master'
 end

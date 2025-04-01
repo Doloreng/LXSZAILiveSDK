@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LXSZAILiveSDK'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of LXSZAILiveSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -28,15 +28,46 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Doloreng/LXSZAILiveSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.1'
+  s.vendored_frameworks = 'LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework'
+  s.source_files = 'LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework/Headers/*.h'
+  s.public_header_files = 'LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework/Headers/*.h'
 
-  s.source_files = 'LXSZAILiveSDK/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'LXSZAILiveSDK' => ['LXSZAILiveSDK/Assets/*.png']
-  # }
+  s.frameworks = 'AVFoundation','AudioToolbox','CoreGraphics','CoreMedia','GLKit','UIKit','VideoToolbox'
+  s.requires_arc = true
+  s.libraries = 'c++'
+  s.resource_bundles = {
+      'LXSZAILiveSDK' => ['LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework/*.bundle']
+  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking'
+  s.dependency 'Aspects'
+  s.dependency 'ASValueTrackingSlider'
+  s.dependency 'CocoaAsyncSocket'
+  s.dependency 'CocoaLumberjack'
+  s.dependency 'GGWkCookie'
+  s.dependency 'HWPanModal'
+  s.dependency 'IQKeyboardManager'
+  s.dependency 'JXCategoryView'
+  s.dependency 'lottie-ios_Oc'
+  s.dependency 'SDWebImage'
+  s.dependency 'MJRefresh'
+  s.dependency 'Masonry'
+  s.dependency 'MMKV'
+  s.dependency 'YYModel'
+  s.dependency 'QCloudCOSXML'
+  s.dependency 'QCloudCore'
+  s.dependency 'KTVHTTPCache'
+  s.dependency 'SJVideoPlayer'
+  s.dependency 'lottie-ios_Oc'
+  s.dependency 'ffmpeg-kit-ios-full-gpl'
+  s.dependency 'UMCommon'
+  s.dependency 'UMDevice'
+  s.dependency 'UMAPM'
+  s.dependency 'SAMKeychain'
+  s.dependency 'WebRTC-Mute'
+  s.dependency 'RegexKitLite'
+  s.dependency 'QCloudTrack/Cls'
+  s.dependency 'WebViewJavascriptBridge'
+  s.dependency 'MBProgressHUD'
 end
