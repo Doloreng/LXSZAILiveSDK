@@ -2,17 +2,20 @@
 //  LXSZAppDelegate.m
 //  LXSZAILiveSDK
 //
-//  Created by Doloreng on 03/28/2025.
+//  Created by Doloreng on 03/31/2025.
 //  Copyright (c) 2025 Doloreng. All rights reserved.
 //
 
 #import "LXSZAppDelegate.h"
+#import <LXSZAILiveKit/LXSZAILiveKit.h>
 
 @implementation LXSZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //MARK: 必须启动的时候初始化
+    [LXSZAILiveKit lxInitConfigWithAgree:YES sdk_channel:@"customer"];
     return YES;
 }
 
