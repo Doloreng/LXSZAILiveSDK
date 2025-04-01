@@ -1,6 +1,0 @@
-framework module Pods_LXSZAILiveSDK_Tests {
-  umbrella header "Pods-LXSZAILiveSDK_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
