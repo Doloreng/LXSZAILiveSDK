@@ -1,0 +1,6 @@
+framework module LXSZAILiveKit {
+  umbrella header "LXSZAILiveKit.h"
+  export *
+
+  module * { export * }
+}

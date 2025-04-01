@@ -1,6 +1,5 @@
 #use_frameworks!
 source 'https://github.com/Doloreng/LXSZPodSpecsRepo.git'
-source 'https://github.com/volcengine/volcengine-specs'
 source 'https://cdn.cocoapods.org/'
 platform :ios, '12.1'
 
