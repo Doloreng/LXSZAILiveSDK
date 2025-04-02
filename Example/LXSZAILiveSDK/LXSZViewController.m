@@ -155,7 +155,6 @@
         UITextField *textF = [[UITextField alloc] initWithFrame:CGRectZero];
         textF.borderStyle = UITextBorderStyleRoundedRect;
         textF.placeholder = @"请输入lx_token";
-        textF.text = @"50142_1751117883_24a6bca2861d5afa96dfadda6c7b18f8";
         textF.font = [UIFont systemFontOfSize:14];
         _tokenTextfield = textF;
     }
@@ -206,7 +205,6 @@
         UITextField *textF = [[UITextField alloc] initWithFrame:CGRectZero];
         textF.borderStyle = UITextBorderStyleRoundedRect;
         textF.placeholder = @"请输入lx_appid";
-        textF.text  = @"164236";
         textF.font = [UIFont systemFontOfSize:14];
         _appTextfield = textF;
     }
@@ -243,7 +241,6 @@
         UITextField *textF = [[UITextField alloc] initWithFrame:CGRectZero];
         textF.borderStyle = UITextBorderStyleRoundedRect;
         textF.placeholder = @"https://xxx.lnsee.com";
-        textF.text  = @"https://testing.lnsee.com";
         textF.font = [UIFont systemFontOfSize:14];
         _envTextfield = textF;
     }
