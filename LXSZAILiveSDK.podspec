@@ -29,6 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.1'
+  s.platform     = :ios, '12.1'
   s.vendored_frameworks = 'LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework'
   s.source_files = 'LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework/Headers/*.h'
   s.public_header_files = 'LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework/Headers/*.h'
