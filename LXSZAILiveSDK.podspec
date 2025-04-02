@@ -39,6 +39,13 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {
       'LXSZAILiveSDK' => ['LXSZAILiveSDK/Frameworks/LXSZAILiveKit.framework/*.bundle']
   }
+  
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'OTHER_LDFLAGS' => '-ObjC',
+    'BITCODE_GENERATION_MODE' => 'NO'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   s.dependency 'AFNetworking'
   s.dependency 'Aspects'
