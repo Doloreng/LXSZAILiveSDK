@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LXSZAILiveSDK'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A short description of LXSZAILiveSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -74,7 +74,7 @@ TODO: Add long description of the pod here.
   s.dependency 'UMAPM'
   s.dependency 'SAMKeychain'
   s.dependency 'WebRTC-Mute'
-  s.dependency 'RegexKitLite'
+  s.dependency 'RegexKitLite-NoWarning'
   s.dependency 'QCloudTrack/Cls'
   s.dependency 'WebViewJavascriptBridge'
   s.dependency 'MBProgressHUD'
