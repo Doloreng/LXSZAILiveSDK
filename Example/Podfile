@@ -4,7 +4,10 @@ source 'https://cdn.cocoapods.org/'
 platform :ios, '12.1'
 
 target 'LXSZAILiveSDK_Example' do
+  # 本地版本，需要引入.framework文件
   pod 'LXSZAILiveSDK', :path => '../'
+  # 正式发布版本， 直接在项目中引用即可
+#   pod 'LXSZAILiveSDK'
   #public pod
   pod 'WebViewJavascriptBridge', :git => 'https://github.com/stury/WebViewJavascriptBridge.git', :branch => 'master'
 end
