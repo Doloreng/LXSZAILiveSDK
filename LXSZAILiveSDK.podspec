@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LXSZAILiveSDK'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'A short description of LXSZAILiveSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -68,7 +68,7 @@ TODO: Add long description of the pod here.
   s.dependency 'KTVHTTPCache'
   s.dependency 'SJVideoPlayer'
   s.dependency 'lottie-ios_Oc'
-  s.dependency 'ffmpeg-kit-ios-full-gpl'
+  s.dependency 'ffmpeg-kit-ios-full-gpl-lingxi'
   s.dependency 'UMCommon'
   s.dependency 'UMDevice'
   s.dependency 'UMAPM'

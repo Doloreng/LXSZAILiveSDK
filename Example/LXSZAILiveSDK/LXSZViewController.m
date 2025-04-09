@@ -46,9 +46,10 @@
 }
 
 - (void)configLayout  {
+    CGFloat height = [UIApplication sharedApplication].statusBarFrame.size.height + 44.0f + 20;
     [self.token_label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(20);
-        make.top.mas_equalTo(80);
+        make.top.mas_equalTo(height);
     }];
     [self.tokenTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.token_label);
