@@ -16,7 +16,6 @@ FOUNDATION_EXPORT const unsigned char LXSZAILiveKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <LXSZAILiveKit/PublicHeader.h>
 
 
-
 typedef enum : NSUInteger {
     LXSZAILiveKitStatusSuccess = 0,
     LXSZAILiveKitStatusLoginError = 10010101,
