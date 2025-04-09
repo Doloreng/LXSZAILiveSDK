@@ -14,7 +14,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ### 增加SepcsRepo源
 
 ```
+# 公开库
 pod repo add LXSpecsRepo https://github.com/Doloreng/LXSZPodSpecsRepo.git
+# 私有相关的库
+pod repo add LXGiteePodSpecsRepo https://gitee.com/roundguo/LXGiteePodSpecsRepo.git
+
 ```
 
 
@@ -24,9 +28,10 @@ pod repo add LXSpecsRepo https://github.com/Doloreng/LXSZPodSpecsRepo.git
 ```
 source 'https://github.com/Doloreng/LXSZPodSpecsRepo.git'
 source 'https://cdn.cocoapods.org/'
+source 'https://gitee.com/roundguo/LXGiteePodSpecsRepo.git'
 
 target 'MyApp' do
-  pod 'LXSZAILiveSDK', '~> 1.0.1'
+  pod 'LXSZAILiveSDK', '~> 1.0.4'
 end
 ```
 
