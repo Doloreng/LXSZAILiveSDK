@@ -75,6 +75,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 退出登录
 - (void)loginOut;
 
+/// 清空web登录的缓存
+/// - Parameter completion: 回调
+- (void)clearWebUserCache:(nullable void(^)(void))completion;
+
+/// 清理SDK的缓存，包括文件、图片、web登录
+/// - Parameter completion: 回调
+- (void)clearSDKCache:(nullable void(^)(void))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

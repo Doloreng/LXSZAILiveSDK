@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIButton *openCreateActionBtn;
 @property (nonatomic, strong) UIButton *openLiveRoomActionBtn;
 @property (nonatomic, strong) UIButton *openSwitchEnvActionBtn;
+@property (nonatomic, strong) UIButton *clearWebUserCacheBtn;
 @end
 
 @implementation LXSZViewController
@@ -40,6 +41,7 @@
     [self.view addSubview:self.env_label];
     [self.view addSubview:self.envTextfield];
     [self.view addSubview:self.openSwitchEnvActionBtn];
+    [self.view addSubview:self.clearWebUserCacheBtn];
     [self configLayout];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -106,6 +108,12 @@
         make.right.equalTo(self.envTextfield.mas_right);
         make.height.mas_equalTo(48);
     }];
+    [self.clearWebUserCacheBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.openSwitchEnvActionBtn.mas_bottom).offset(12);
+        make.left.equalTo(self.openSwitchEnvActionBtn.mas_left);
+        make.right.equalTo(self.openSwitchEnvActionBtn.mas_right);
+        make.height.mas_equalTo(48);
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,7 +140,9 @@
     
     [LXSZAILiveKit.sharedInstance changeLXNetEnvTo:self.envTextfield.text];
 }
-
+- (void)clearWebUserActionPressed:(UIButton *)sender {
+    [LXSZAILiveKit.sharedInstance clearWebUserCache:nil];
+}
 #pragma mark LXSZAILiveKitDelegate
 
 - (void)onSDKError:(LXSZAILiveKitStatus)error_no errorMsg:(NSString *)errorMsg {
@@ -262,5 +272,18 @@
     }
     return _openSwitchEnvActionBtn;
 }
-
+- (UIButton *)clearWebUserCacheBtn {
+    if (!_clearWebUserCacheBtn) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        button.backgroundColor = UIColor.darkGrayColor;
+        button.layer.cornerRadius = 24;
+        button.layer.masksToBounds = YES;
+        [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        [button setTitle:@"清除web缓存" forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont systemFontOfSize:16];
+        [button addTarget:self action:@selector(clearWebUserActionPressed:) forControlEvents:UIControlEventTouchUpInside];
+        _clearWebUserCacheBtn = button;
+    }
+    return _clearWebUserCacheBtn;
+}
 @end
